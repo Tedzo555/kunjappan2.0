@@ -117,6 +117,19 @@ async def next_page(bot, query):
             for file in files
         ]
 
+    btn.insert(0, 
+        [
+            InlineKeyboardButton(f'🎬 {search} 🎬', 'reqst11')
+        ]
+    )
+    btn.insert(1,
+        [
+            InlineKeyboardButton(f'📂 ғɪʟᴇs: {len(files)}', 'dupe'),
+            InlineKeyboardButton(f'🎁 ᴛɪᴘs: {len(files)}', 'dupe'),
+            InlineKeyboardButton(f'📮 ɪɴғᴏ: {len(files)}', 'dupe'),
+        ]
+    )
+
     if 0 < offset <= 10:
         off_set = 0
     elif offset == 0:
