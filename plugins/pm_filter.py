@@ -452,9 +452,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ᴊsᴏɴ', callback_data='json')
             ],[
             InlineKeyboardButton('🏠 Hᴏᴍᴇ', callback_data='start'),
-            InlineKeyboardButton('🤫ᴍʏ Sᴛᴀᴛᴜs', callback_data='stats'),
-            ],[
-            InlineKeyboardButton('Sᴛᴏʀʏ ᴀɴᴅ sᴛᴀᴛᴜs, url='https://t.me/malayalam_whatsapp_status_tamil')
+            InlineKeyboardButton('🤫 Sᴛᴀᴛᴜs', callback_data='stats')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -737,4 +735,3 @@ async def advantage_spell_chok(msg):
     btn.append([InlineKeyboardButton(text="Cʟᴏsᴇ", callback_data=f'spolling#{user}#close_spellcheck')])
     await msg.reply("I ᴄᴏᴜʟᴅɴ'ᴛ ғɪɴᴅ ᴀɴʏᴛʜɪɴɢ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴀᴛ\nDɪᴅ ʏᴏᴜ ᴍᴇᴀɴ ᴀɴʏ ᴏɴᴇ ᴏғ ᴛʜᴇsᴇ?", reply_markup=InlineKeyboardMarkup(btn))
     
-
