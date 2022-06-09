@@ -439,7 +439,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ᴊsᴏɴ', callback_data='json')
             ],[
             InlineKeyboardButton('🏠 Hᴏᴍᴇ', callback_data='start'),
-            InlineKeyboardButton('🤫 Sᴛᴀᴛᴜs', callback_data='stats')
+            InlineKeyboardButton('🤫ᴍʏ Sᴛᴀᴛᴜs', callback_data='stats')
+            ],[
+            InlineKeyboardButton('Sᴛᴏʀʏ ᴀɴᴅ sᴛᴀᴛᴜs, url='https://t.me/malayalam_whatsapp_status_tamil')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
