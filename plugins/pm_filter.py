@@ -115,7 +115,7 @@ async def next_page(bot, query):
                 ),
             ],[
             InlineKeyboardButton(
-                    text=f"{file.file_caption}",
+                    text=f"{file_caption}",
                     callback_data=f'files_#{file.file_id}',
                 ),
             ]
