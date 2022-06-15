@@ -98,7 +98,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}]👀 {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -113,11 +113,6 @@ async def next_page(bot, query):
                     text=f"{get_size(file.file_size)}",
                     callback_data=f'files_#{file.file_id}',
                 ),
-            ],[
-            InlineKeyboardButton(
-                    text=f"{file_caption}",
-                    callback_data=f'files_#{file.file_id}',
-                ),
             ]
             for file in files
         ]
@@ -129,9 +124,7 @@ async def next_page(bot, query):
     )
     btn.insert(1,
         [
-            InlineKeyboardButton(f'📂 ғɪʟᴇs: {len(files)}', 'dupe'),
-            InlineKeyboardButton(f'🎁 ᴛɪᴘs: {len(files)}', 'dupe'),
-            InlineKeyboardButton(f'📮 ɪɴғᴏ: {len(files)}', 'dupe'),
+            InlineKeyboardButton(f'📂 ғɪʟᴇs: {len(files)}', url='https://t.me/tedzomovie01')
         ]
     )
 
@@ -143,7 +136,9 @@ async def next_page(bot, query):
         off_set = offset - 10
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("👨‍🦯 Ⓑ︎Ⓐ︎Ⓒ︎Ⓚ︎", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"📖 𝑝𝑎𝑔𝑒𝑠 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages")]
+            [InlineKeyboardButton(text=f"📃 1/{data['total']}",callback_data="pages"),
+             InlineKeyboardButton("🗑️", callback_data="close"),
+             InlineKeyboardButton(text="➡",callback_data=f"nextbot_0_{keyword}")]
         )
     elif off_set is None:
         btn.append([InlineKeyboardButton(f"📝 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"), InlineKeyboardButton("ɴᴇxᴛ 🚸", callback_data=f"next_{req}_{key}_{n_offset}")])
@@ -152,7 +147,7 @@ async def next_page(bot, query):
             [
                 InlineKeyboardButton("👨‍🦯 ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
                 InlineKeyboardButton(f"📝 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"),
-                InlineKeyboardButton("ᑎᗴ᙭T ➡️", callback_data=f"next_{req}_{key}_{n_offset}")
+                InlineKeyboardButton("➡", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
     try:
