@@ -119,11 +119,7 @@ async def next_page(bot, query):
 
     btn.insert(0, 
         [
-            InlineKeyboardButton(f'🎬 {search} 🎬', 'reqst11')
-        ]
-    )
-    btn.insert(1,
-        [
+            InlineKeyboardButton(f'🎬 {search} 🎬', 'reqst11'),
             InlineKeyboardButton(f'📂 ғɪʟᴇs: {len(files)}', url='https://t.me/tedzomovie01')
         ]
     )
@@ -137,7 +133,7 @@ async def next_page(bot, query):
     if n_offset == 0:
         btn.append(
             [InlineKeyboardButton(text=f"📃 1/{data['total']}",callback_data="pages"),
-             InlineKeyboardButton("🗑️", callback_data="close"),
+             InlineKeyboardButton("🗑️", callback_data="close_data"),
              InlineKeyboardButton(text="➡",callback_data=f"nextbot_0_{keyword}")]
         )
     elif off_set is None:
@@ -445,6 +441,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "help":
         buttons = [[
+            InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘs ➕', url='http://t.me/tedzo_v3_bot?startgroup=true')
+            ],[
             InlineKeyboardButton('🙂 Mᴀɴᴜᴇʟ Fɪʟᴛᴇʀ', callback_data='manuelfilter'),
             InlineKeyboardButton('🤓 Aᴜᴛᴏ Fɪʟᴛᴇʀ', callback_data='autofilter')
             ],[
@@ -462,6 +460,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons= [[
+            InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘs ➕', url='http://t.me/tedzo_v3_bot?startgroup=true')
+            ],[
             InlineKeyboardButton('🤖 Uᴘᴅᴀᴛᴇs', url='https://t.me/tzobotz'),
             InlineKeyboardButton('💜 Sᴏᴜʀᴄᴇ', callback_data='source')
             ],[
@@ -632,7 +632,7 @@ async def auto_filter(client, msg, spoll=False):
         BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
         btn.append(
-            [InlineKeyboardButton(text=f"📖 1/{round(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇᴇxᴛ 🚸",callback_data=f"next_{req}_{key}_{offset}")]
+            [InlineKeyboardButton(text=f"📖 1/{round(int(total_results)/10)}",callback_data="pages"),InlineKeyboardButton("Close🗑️", callback_data="close_data"), InlineKeyboardButton(text="ɴᴇxᴛ 🚸",callback_data=f"next_{req}_{key}_{offset}")]
         )
     else:
         btn.append(
