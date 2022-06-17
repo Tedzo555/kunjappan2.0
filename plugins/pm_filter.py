@@ -427,6 +427,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘs ➕', url='http://t.me/tedzo_v3_bot?startgroup=true')
             ],[
+           InlineKeyboardButton('𝚂𝚝𝚊𝚝𝚞𝚜  ☻︎ 𝚂𝚝𝚘𝚛𝚢', url='https://chat.whatsapp.com/Li4tlP241HtHRwJLnpfqDJ')
+            ],[
             InlineKeyboardButton('🔍 Sᴇᴀʀᴄʜ Hᴇʀᴇ', switch_inline_query_current_chat=''),
             InlineKeyboardButton('🤖 Uᴘᴅᴀᴛᴇs', url='https://t.me/tzobotz')
             ],[
@@ -442,6 +444,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘs ➕', url='http://t.me/tedzo_v3_bot?startgroup=true')
+            ],[
+           InlineKeyboardButton('𝚂𝚝𝚊𝚝𝚞𝚜  ☻︎ 𝚂𝚝𝚘𝚛𝚢', url='https://chat.whatsapp.com/Li4tlP241HtHRwJLnpfqDJ')
             ],[
             InlineKeyboardButton('🙂 Mᴀɴᴜᴇʟ Fɪʟᴛᴇʀ', callback_data='manuelfilter'),
             InlineKeyboardButton('🤓 Aᴜᴛᴏ Fɪʟᴛᴇʀ', callback_data='autofilter')
@@ -461,6 +465,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "about":
         buttons= [[
             InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘs ➕', url='http://t.me/tedzo_v3_bot?startgroup=true')
+            ],[
+           InlineKeyboardButton('𝚂𝚝𝚊𝚝𝚞𝚜  ☻︎ 𝚂𝚝𝚘𝚛𝚢', url='https://chat.whatsapp.com/Li4tlP241HtHRwJLnpfqDJ')
             ],[
             InlineKeyboardButton('🤖 Uᴘᴅᴀᴛᴇs', url='https://t.me/tzobotz'),
             InlineKeyboardButton('💜 Sᴏᴜʀᴄᴇ', callback_data='source')
