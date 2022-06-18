@@ -30,7 +30,11 @@ auth_channel = environ.get('AUTH_CHANNEL')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
+# nop
 COMMAND_HAND_LER = environ.get("COMMAND_HAND_LER", "/")
+MAX_MESSAGE_LENGTH = 4096
+TMP_DOWNLOAD_DIRECTORY = environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
+TG_MAX_SELECT_LEN = environ.get("TG_MAX_SELECT_LEN", "100")
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "")
