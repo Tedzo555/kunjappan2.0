@@ -2,6 +2,7 @@ import os
 import logging
 import random
 import asyncio
+import pyrogram
 from Script import script
 from pyrogram import Client, filters
 from pyrogram.types import Message
@@ -117,12 +118,12 @@ async def start(client, message):
         caption=f_caption,
         )
 @Client.on_message(filters.text & filters.command(["textl"]))
-async def gen_link_text(bot, update):
+async def link_text(bot, update):
            await bot.send_photo(chat_id=update.chat.id,
         photo=random.choice(PICS),
-        caption=f"**Message Sharing Link Is Ready** :- https://t.me/share/url?url={(message.reply_to_message.text)}", reply_to_message_id=update.id,
+        caption=f"**Message Sharing Link Is Ready** :- https://t.me/share/url?url={(message.text)}", reply_to_message_id=update.id,
  reply_markup=InlineKeyboardMarkup( 
-          [[ InlineKeyboardButton("📤 Share Link 📤", url=f"https://t.me/share/url?url={(message.reply_to_message.text)}") ]] )       
+          [[ InlineKeyboardButton("📤 Share Link 📤", url=f"https://t.me/share/url?url={(message.text)}") ]] )       
     )
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):
