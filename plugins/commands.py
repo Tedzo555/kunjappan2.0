@@ -116,10 +116,10 @@ async def start(client, message):
         caption=f_caption,
         )
 @Client.on_message(filters.private & filters.text & ~filters.command(["tlink"]))
-async def gen_link_batch(bot, message):
+async def gen_link_batch(bot, update):
     if " " not in message.text:
         return await message.reply("𝚄𝚂𝙴 𝙲𝙾𝚁𝚁𝙴𝙲𝚃 𝙵𝙾𝚁𝙼𝙰𝚃.\n𝙴𝚇𝙰𝙼𝙿𝙻𝙴 ›› <code>/batch https://t.me/MWUpdatez/3 https://t.me/MWUpdatez/8</code>.")
-      await bot.send_photo(chat_id=update.chat.id, photo=environ.get("PICS", "https://telegra.ph/file/2b82d3a491f6b5869092c.jpg"),
+      await bot.send_photo(chat_id=update.chat.id, photo=random.choice(PICS)),
         caption=f"**Message Sharing Link Is Ready** :- https://t.me/share/url?url={quote(update.text)}", reply_to_message_id=update.id, reply_markup=InlineKeyboardMarkup( [[ InlineKeyboardButton("📤 Share Link 📤", url=f"https://t.me/share/url?url={quote(update.text)}") ]] )       
     )
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
