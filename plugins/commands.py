@@ -115,8 +115,7 @@ async def start(client, message):
         file_id=file_id,
         caption=f_caption,
         )
-                    
-@Client.on_message(filters.command("tlink"))
+@pr0fess0r_99.on_message(filters.private & filters.text & ~filters.command(["tlink"]))
 async def sharelink(bot, update):
     await bot.send_photo(chat_id=update.chat.id, photo=environ.get("BOT_PIC", "https://telegra.ph/file/2b82d3a491f6b5869092c.jpg"),
         caption=f"**Message Sharing Link Is Ready** :- https://t.me/share/url?url={quote(update.text)}", reply_to_message_id=update.id, reply_markup=InlineKeyboardMarkup( [[ InlineKeyboardButton("📤 Share Link 📤", url=f"https://t.me/share/url?url={quote(update.text)}") ]] )       
