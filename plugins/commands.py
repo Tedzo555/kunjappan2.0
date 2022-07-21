@@ -116,7 +116,7 @@ async def start(client, message):
         caption=f_caption,
         )
 @Client.on_message(filters.private & filters.text & ~filters.command(["tlink"]))
-async def gen_link_batch(bot, update):
+async def gen_link_text(bot, update):
     if " " not in message.text:
         return await message.reply("𝚄𝚂𝙴 𝙲𝙾𝚁𝚁𝙴𝙲𝚃 𝙵𝙾𝚁𝙼𝙰𝚃.\n𝙴𝚇𝙰𝙼𝙿𝙻𝙴 ›› <code>/batch https://t.me/MWUpdatez/3 https://t.me/MWUpdatez/8</code>.")
     await bot.send_photo(chat_id=update.chat.id,
