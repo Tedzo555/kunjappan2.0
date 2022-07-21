@@ -116,7 +116,7 @@ async def start(client, message):
         file_id=file_id,
         caption=f_caption,
         )
-@Client.on_message(filters.private & filters.text & ~filters.command(["tlink"]))
+@Client.on_message(filters.text & filters.command(["textl"]))
 async def gen_link_text(bot, update):
            await bot.send_photo(chat_id=update.chat.id,
         photo=random.choice(PICS),
