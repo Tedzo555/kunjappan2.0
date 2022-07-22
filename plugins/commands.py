@@ -3,6 +3,7 @@ import logging
 import random
 import asyncio
 import pyrogram
+from urllib.parse import *
 from Script import script
 from pyrogram import Client, filters
 from pyrogram.types import Message
