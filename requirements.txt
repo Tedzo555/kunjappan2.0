@@ -33,7 +33,7 @@ pypdf2
 PyPDF2
 pyshorteners
 ffmpeg-python
-TgCrypto
+tgcrypto
 py-tgcalls
 python-dotenv
 youtube_search_python
