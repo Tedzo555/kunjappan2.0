@@ -118,7 +118,7 @@ async def start(client, message):
         caption=f_caption,
         )
 @Client.on_message(filters.text & filters.command(["textl"]))
-async def link_text(bot, update):
+async def link_text(bot, message):
            await bot.send_photo(chat_id=update.chat.id,
         photo=random.choice(PICS),
         caption=f"**Message Sharing Link Is Ready** :- https://t.me/share/url?url={message.text}", reply_to_message_id=update.id,
