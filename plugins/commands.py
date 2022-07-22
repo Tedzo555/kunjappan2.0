@@ -121,10 +121,10 @@ async def start(client, message):
 @Client.on_message(filters.text & filters.command(["textl"]))
 async def link_text(bot, update):
  textt= update.text
-           await bot.send_photo(chat_id=update.chat.id,
-        photo=random.choice(PICS),
-        caption=f"**Message Sharing Link Is Ready** :- https://t.me/share/url?url={update.text}", reply_to_message_id=update.id,
- reply_markup=InlineKeyboardMarkup( 
+           await message.reply_photo(
+            photo=random.choice(PICS),
+            caption=f"**Message Sharing Link Is Ready** :- https://t.me/share/url?url={update.text}", reply_to_message_id=update.id,
+         reply_markup=InlineKeyboardMarkup( 
           [[ InlineKeyboardButton("📤 Share Link 📤", url=f"https://t.me/share/url?url={textt}") ]] )       
     )
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
