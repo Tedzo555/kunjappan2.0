@@ -4,7 +4,7 @@ import random
 import asyncio
 import pyrogram
 from Script import script
-from urllib.parse import
+from urllib.parse import *
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram.errors.exceptions.bad_request_400 import ChatAdminRequired
