@@ -121,7 +121,7 @@ async def start(client, message):
 async def link_text(bot, message):
            await bot.send_photo(chat_id=update.chat.id,
         photo=random.choice(PICS),
-        caption=f"**Message Sharing Link Is Ready** :- https://t.me/share/url?url={message.text}", reply_to_message_id=update.id,
+        caption=f"**Message Sharing Link Is Ready** :- https://t.me/share/url?url={message.text}", reply_to_message_id=message.id,
  reply_markup=InlineKeyboardMarkup( 
           [[ InlineKeyboardButton("📤 Share Link 📤", url=f"https://t.me/share/url?url={message.text}") ]] )       
     )
