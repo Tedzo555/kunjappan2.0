@@ -449,14 +449,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ᴍᴀɴᴜᴇʟ ғɪʟᴛᴇʀ', callback_data='manuelfilter'),
             InlineKeyboardButton(' ᴀᴜᴛᴏ ғɪʟᴛᴇʀ', callback_data='autofilter')
             ],[
-            InlineKeyboardButton(' ᴄᴏɴɴᴇᴄᴛɪᴏɴs', callback_data='coct'),
-            InlineKeyboardButton('ᴊsᴏɴs', callback_data='json')
+            InlineKeyboardButton('★--------۞--------★', callback_data='help')
             ],[
-            InlineKeyboardButton(' 𝙃𝙊𝙈𝙀', callback_data='start'),
-            InlineKeyboardButton('𝙎𝙏𝘼𝙏𝙐𝙎', callback_data='stats')
+            InlineKeyboardButton('ᴄᴏɴɴᴇᴄᴛɪᴏɴs', callback_data='coct'),
+            InlineKeyboardButton('ᴛᴇʟᴇɢʀᴀᴘʜ', callback_data='json')
+            ],[
+            InlineKeyboardButton('★--------۞--------★', callback_data='help')
+            ],[
+            InlineKeyboardButton(' ᴊsᴏɴ', callback_data='start'),
+            InlineKeyboardButton('ᴘᴅғ', callback_data='stats')
             ],[ 
-            InlineKeyboardButton(' 𝙏𝙀𝙇𝙀𝙂𝙍𝘼𝙋𝙃', callback_data='telegraph'),
-            InlineKeyboardButton('𝙋𝘿𝙁', callback_data='pdf')
+            InlineKeyboardButton(' 𝗛𝗢𝗠𝗘', callback_data='start'),
+            InlineKeyboardButton('𝗦𝗧𝗔𝗧𝗦', callback_data='stats')
              
             ]]
         reply_markup = InlineKeyboardMarkup(buttons)
