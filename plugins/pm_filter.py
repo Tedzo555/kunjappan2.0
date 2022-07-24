@@ -449,12 +449,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ᴍᴀɴᴜᴇʟ ғɪʟᴛᴇʀ', callback_data='manuelfilter'),
             InlineKeyboardButton(' ᴀᴜᴛᴏ ғɪʟᴛᴇʀ', callback_data='autofilter')
             ],[
-            InlineKeyboardButton('★--------۞--------★', callback_data='help')
+            InlineKeyboardButton('★--------۞--------★', url='http://t.me/tzobotz')
             ],[
             InlineKeyboardButton('ᴄᴏɴɴᴇᴄᴛɪᴏɴs', callback_data='coct'),
             InlineKeyboardButton('ᴛᴇʟᴇɢʀᴀᴘʜ', callback_data='json')
             ],[
-            InlineKeyboardButton('★--------۞--------★', callback_data='help')
+            InlineKeyboardButton('★--------۞--------★', url='http://t.me/tedzosir01')
             ],[
             InlineKeyboardButton(' ᴊsᴏɴ', callback_data='start'),
             InlineKeyboardButton('ᴘᴅғ', callback_data='stats')
