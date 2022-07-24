@@ -105,7 +105,7 @@ Added By - {}
 ID - <code>{}</code>
 Name - {}
 """
-TELEGRAPH_TXT = """
+    TELEGRAPH_TXT = """
 ⌨︎ <a href=https://t.me/tedzosir01>𝗧𝗘𝗗𝗭𝗢</a>
 ⌨︎ /📚 HELP : Telegraph 🖼️
 
@@ -120,11 +120,12 @@ NOTE:
 • This Command Is Available in goups and pms
 • This Command Can be used by everyone
 """
-PDF_TXT = """⌨︎ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
+    PDF_TXT = """⌨︎ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
 ⌨︎ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/tedzosir01>𝗧𝗘𝗗𝗭𝗢</a>
 
 Plz share pictures """
-ABOUT_TXT = """⌨︎ Help:  TTS 🎤 module:
+
+TTS_TXT = """⌨︎ Help:  TTS 🎤 module:
 
 Translate text to speech
 
