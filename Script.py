@@ -40,7 +40,7 @@ class script(object):
 3. Buttons should be properly parsed as markdown format
 
 <b>URL buttons:</b>
-<code>[Button Text](buttonurl:https://t.me/kingofpsychoBot)</code>
+<code>[Button Text](buttonurl:https://t.me/tedzosir)</code>
 
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
@@ -105,3 +105,35 @@ Added By - {}
 ID - <code>{}</code>
 Name - {}
 """
+TELEGRAPH_TXT = """
+⌨︎ <a href=https://t.me/tedzosir01>𝗧𝗘𝗗𝗭𝗢</a>
+⌨︎ /📚 HELP : Telegraph 🖼️
+
+Do as you wish with telegra.ph module!
+
+USAGE:
+
+🤧 /telegraph - Send me Picture or Vide Under (5MB)
+
+NOTE:
+
+• This Command Is Available in goups and pms
+• This Command Can be used by everyone
+"""
+PDF_TXT = """⌨︎ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
+⌨︎ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/tedzosir01>𝗧𝗘𝗗𝗭𝗢</a>
+
+Plz share pictures """
+ABOUT_TXT = """⌨︎ Help:  TTS 🎤 module:
+
+Translate text to speech
+
+Commands and Usage:
+
+• /tts  : convert text to speech
+
+NOTE:
+
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• IMDb can translate texts to 200+ languages."""
