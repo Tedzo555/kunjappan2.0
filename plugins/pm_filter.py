@@ -428,13 +428,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ 𝘼𝘿𝘿 𝙈𝙀 𝙔𝙊𝙐𝙍 𝙂𝙍𝙐𝙊𝙋𝙎 ➕', url='http://t.me/tedzo_v3_bot?startgroup=true')
             ],[
-            InlineKeyboardButton('🔍 𝙎𝙀𝘼𝙍𝘾𝙃 𝙃𝙀𝙍𝙀', switch_inline_query_current_chat='')
+            InlineKeyboardButton(' 🔍 𝙎𝙀𝘼𝙍𝘾𝙃 𝙃𝙀𝙍𝙀', switch_inline_query_current_chat='')
             ],[
             InlineKeyboardButton('🤖 𝙐𝙋𝘿𝘼𝙏𝙎', url='https://t.me/tzobotz')
             ],[
-            InlineKeyboardButton('🥺 𝙃𝙀𝙇𝙋', callback_data='help')
+            InlineKeyboardButton('🥺 𝘼𝘽𝙊𝙐𝙏', callback_data='help')
             ],[
-            InlineKeyboardButton(' 𝘼𝘽𝙊𝙐𝙏', callback_data='about')
+            InlineKeyboardButton('❤️𝙃𝙀𝙇𝙋', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -446,15 +446,19 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘs ➕', url='http://t.me/tedzo_v3_bot?startgroup=true')
             ],[
-            InlineKeyboardButton('𝙈𝘼𝙉𝙐𝙀𝙇 𝙁𝙄𝙇𝙏𝙀𝙍', callback_data='manuelfilter'),
-            InlineKeyboardButton(' 𝘼𝙐𝙏𝙊 𝙁𝙄𝙇𝙏𝙀𝙍', callback_data='autofilter')
+            InlineKeyboardButton('ᴍᴀɴᴜᴇʟ ғɪʟᴛᴇʀ', callback_data='manuelfilter'),
+            InlineKeyboardButton(' ᴀᴜᴛᴏ ғɪʟᴛᴇʀ', callback_data='autofilter')
             ],[
-            InlineKeyboardButton(' 𝘾𝙊𝙉𝙉𝙀𝘾𝙏𝙊𝙄𝙉𝙎', callback_data='coct'),
-            InlineKeyboardButton('𝙅𝙎𝙊𝙉𝙎', callback_data='json')
+            InlineKeyboardButton(' ᴄᴏɴɴᴇᴄᴛɪᴏɴs', callback_data='coct'),
+            InlineKeyboardButton('ᴊsᴏɴs', callback_data='json')
             ],[
             InlineKeyboardButton(' 𝙃𝙊𝙈𝙀', callback_data='start'),
             InlineKeyboardButton('𝙎𝙏𝘼𝙏𝙐𝙎', callback_data='stats')
-        ]]
+            ],[ 
+            InlineKeyboardButton(' 𝙏𝙀𝙇𝙀𝙂𝙍𝘼𝙋𝙃', callback_data='telegraph'),
+            InlineKeyboardButton('𝙋𝘿𝙁', callback_data='pdf')
+             
+            ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
