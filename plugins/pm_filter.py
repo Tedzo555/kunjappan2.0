@@ -502,6 +502,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
+    elif query.data == "pdf":
+        buttons = [[
+            InlineKeyboardButton('🚶🏿Bᴀᴄᴋ', callback_data='help'),
+            InlineKeyboardButton('⏹️ extra', callback_data='extra')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.PDF_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
     elif query.data == "button":
         buttons = [[
             InlineKeyboardButton('🚶🏿Bᴀᴄᴋ', callback_data='manuelfilter')
@@ -529,6 +540,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.CONNECTION_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+        elif query.data == "telegraph":
+        buttons = [[
+            InlineKeyboardButton('🚶🏿Bᴀᴄᴋ', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.TELEGRAPH_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
         )
