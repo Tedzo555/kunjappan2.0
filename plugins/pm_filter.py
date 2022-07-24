@@ -456,8 +456,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('★--------۞--------★', url='http://t.me/tedzosir01')
             ],[
-            InlineKeyboardButton(' ᴊsᴏɴ', callback_data='start'),
-            InlineKeyboardButton('ᴘᴅғ', callback_data='stats')
+            InlineKeyboardButton(' ᴊsᴏɴ', callback_data='json'),
+            InlineKeyboardButton('ᴘᴅғ', callback_data='pdf')
             ],[ 
             InlineKeyboardButton(' 𝗛𝗢𝗠𝗘', callback_data='start'),
             InlineKeyboardButton('𝗦𝗧𝗔𝗧𝗦', callback_data='stats')
