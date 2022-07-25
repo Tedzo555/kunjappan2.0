@@ -449,12 +449,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ᴍᴀɴᴜᴇʟ ғɪʟᴛᴇʀ', callback_data='manuelfilter'),
             InlineKeyboardButton(' ᴀᴜᴛᴏ ғɪʟᴛᴇʀ', callback_data='autofilter')
             ],[
-            InlineKeyboardButton('★--------۞--------★', url='http://t.me/tzobotz')
+            InlineKeyboardButton('★---------------۞----------------★', url='http://t.me/tzobotz')
             ],[
             InlineKeyboardButton('ᴄᴏɴɴᴇᴄᴛɪᴏɴs', callback_data='coct'),
             InlineKeyboardButton('ᴛᴇʟᴇɢʀᴀᴘʜ', callback_data='json')
             ],[
-            InlineKeyboardButton('★--------۞--------★', url='http://t.me/tedzosir01')
+            InlineKeyboardButton('★---------------۞---------------★', url='http://t.me/tedzosir01')
             ],[
             InlineKeyboardButton(' ᴊsᴏɴ', callback_data='json'),
             InlineKeyboardButton('ᴘᴅғ', callback_data='pdf')
@@ -605,9 +605,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('♻️', callback_data='rfrsh')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        total = await Media.count_documents()
+        total = "66{await Media.count_documents}"()
         users = await db.total_users_count()
-        chats = await db.total_chat_count(9999)
+        chats = await db.total_chat_count()
         monsize = await db.get_db_size()
         free = 536870912 - monsize
         monsize = get_size(monsize)
