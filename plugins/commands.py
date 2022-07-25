@@ -40,13 +40,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘs ➕', url='http://t.me/tedzo_v3_bot?startgroup=true')
+            InlineKeyboardButton('𝘼𝘿𝘿 𝙐 𝙂𝙍𝙊𝙐𝙋 ➕', url='http://t.me/tedzo_v3_bot?startgroup=true')
             ],[
-            InlineKeyboardButton('🔍 Sᴇᴀʀᴄʜ Hᴇʀᴇ', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Uᴘᴅᴀᴛᴇs', url='https://t.me/tzobotz')
+            InlineKeyboardButton(' 𝙎𝙀𝘼𝙍𝘾𝙃 𝙃𝙀𝙍𝙀', switch_inline_query_current_chat=''),
+            InlineKeyboardButton(' 𝙐𝙋𝘿𝘼𝙏𝙀𝙎', url='https://t.me/tzobotz')
             ],[
-            InlineKeyboardButton('🥺 Hᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('😎 Aʙᴏᴜᴛ', callback_data='about')
+            InlineKeyboardButton(' 𝙃𝙀𝙇𝙋', callback_data='help'),
+            InlineKeyboardButton(' 𝘼𝘽𝙊𝙐𝙏', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
